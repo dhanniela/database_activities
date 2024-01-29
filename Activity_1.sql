@@ -24,5 +24,20 @@ SET first_name = 'Ivan',
     location = 'Bulacan'
 WHERE id = 1;
 
-DELETE FROM students
+DELETE
+FROM students
 WHERE id = (SELECT MAX(id) FROM students);
+
+SELECT COUNT(*) AS total_students
+FROM students;
+
+SELECT *
+FROM students
+WHERE location = 'Manila';
+
+SELECT AVG(age) AS average_age
+FROM students;
+
+SELECT *
+FROM students
+ORDER BY age DESC;
